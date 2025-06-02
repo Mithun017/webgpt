@@ -1,11 +1,12 @@
 import google.generativeai as genai
+import textwrap
 
 genai.configure(api_key="AIzaSyC7rvtn-p84BiBAuK09fQwOAswVPjSnjCU")
 
 model = genai.GenerativeModel("gemini-2.0-flash")
 
 def chat_with_flash():
-    print("I'm Here: \n")
+    print("I'm Here Hello There - \n")
     chat = model.start_chat()
 
     while True:
@@ -15,6 +16,10 @@ def chat_with_flash():
             break
 
         response = chat.send_message(user)
-        print("Bobo", response.text)
+        print("Bobo:\n")
+        
+        # Print line-by-line preserving line breaks
+        for line in response.text.splitlines():
+            print(textwrap.fill(line, width=100, replace_whitespace=False))
 
 chat_with_flash()
