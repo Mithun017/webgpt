@@ -3,7 +3,7 @@ import textwrap
 
 genai.configure(api_key="AIzaSyC7rvtn-p84BiBAuK09fQwOAswVPjSnjCU")
 
-model = genai.GenerativeModel("gemini-2.0-flash")
+model = genai.GenerativeModel("gemini-1.5-flash")
 
 def chat_with_flash():
     print("I'm Here Hello There - \n")
