@@ -2,10 +2,10 @@ import google.generativeai as genai
 
 genai.configure(api_key="AIzaSyC7rvtn-p84BiBAuK09fQwOAswVPjSnjCU")
 
-model = genai.GenerativeModel("gemini-1.5-flash")
+model = genai.GenerativeModel("gemini-2.0-flash")
 
 def chat_with_flash():
-    print("Chatbot (Gemini 1.5 Flash) - type 'exit' to stop\n")
+    print("I'm Here: \n")
     chat = model.start_chat()
 
     while True:
@@ -15,6 +15,6 @@ def chat_with_flash():
             break
 
         response = chat.send_message(user)
-        print("Gemini:", response.text)
+        print("Bobo", response.text)
 
 chat_with_flash()
